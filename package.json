@@ -1,0 +1,51 @@
+{
+  "name": "media-compress",
+  "version": "0.1.0",
+  "description": "Image and video compression for Node.js (sharp + ffmpeg)",
+  "type": "module",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js",
+      "default": "./src/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "cli.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "bin": {
+    "media-compress": "cli.js"
+  },
+  "sideEffects": false,
+  "keywords": [
+    "compress",
+    "image",
+    "video",
+    "jpeg",
+    "webp",
+    "mp4",
+    "sharp",
+    "ffmpeg"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "sharp": "^0.35.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.0.0"
+  }
+}
